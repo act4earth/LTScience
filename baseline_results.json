@@ -1,0 +1,164 @@
+{
+  "filename": "ecosphere/ecosphere_lab_3_14_systems_audit.html",
+  "checks": [
+    {
+      "name": "Diffusion conserves total solute in an open tank",
+      "status": "FAIL",
+      "evidence": "10 became 9.700000000000001"
+    },
+    {
+      "name": "Diffusion conserves solute beside a glass divider",
+      "status": "FAIL",
+      "evidence": "10 became 9.925"
+    },
+    {
+      "name": "Glass divider isolates chemical diffusion",
+      "status": "PASS",
+      "evidence": "Uniform concentrations remain separate"
+    },
+    {
+      "name": "Erasing a divider reconnects chemistry cache",
+      "status": "PASS",
+      "evidence": "2 compartments -> 1"
+    },
+    {
+      "name": "Submerged glass compartment has no direct atmospheric exchange",
+      "status": "PASS",
+      "evidence": {
+        "surface": 1.2582088,
+        "sealed": 1
+      }
+    },
+    {
+      "name": "Photosynthesis stops at zero dissolved carbon",
+      "status": "FAIL",
+      "evidence": "O2 production at zero CO2: 0.05404597083553509\n+ actual - expected\n\n+ 0.05404597083553509\n- 0\n"
+    },
+    {
+      "name": "Plants do not change chemistry across glass",
+      "status": "FAIL",
+      "evidence": "Right-side O2 changed by 0.0059741173941821775"
+    },
+    {
+      "name": "Added food patches remain inside glass compartment",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n0.25 !== 0\n"
+    },
+    {
+      "name": "A prey item cannot feed two fish in one step",
+      "status": "FAIL",
+      "evidence": "2 meals from 1 prey\n\n2 !== 1\n"
+    },
+    {
+      "name": "Separated fish cannot spawn together",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n3 !== 2\n"
+    },
+    {
+      "name": "Algae cannot appear spontaneously in sterile water",
+      "status": "FAIL",
+      "evidence": "Algae recruited: 0.0014373129864350676\n+ actual - expected\n\n+ 0.0014373129864350676\n- 0\n"
+    },
+    {
+      "name": "Animal movement cannot tunnel through thin glass",
+      "status": "PASS",
+      "evidence": {
+        "x": 8.75
+      }
+    },
+    {
+      "name": "Step honors short and zero durations",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n8.1 !== 8\n"
+    },
+    {
+      "name": "Carcasses settle and finish decomposing",
+      "status": "PASS",
+      "evidence": {
+        "detritus": 0.4806983522947522
+      }
+    },
+    {
+      "name": "Detritus loading consumes O2 and declines",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "o2": 8,
+          "detritus": 0.5
+        },
+        "after": {
+          "o2": 7.997386889928771,
+          "detritus": 0.49888001910387747
+        }
+      }
+    },
+    {
+      "name": "Seeded starter runs stay finite and bounded for 30 days",
+      "status": "PASS",
+      "evidence": [
+        {
+          "seed": 42,
+          "o2": 7.804813163695969,
+          "co2": 5.7135387631018855,
+          "nh3": 0.0002526917900316274,
+          "no2": 0.0000011378011062656189,
+          "no3": 5.09557307502193,
+          "algae": 0.03021581066163836,
+          "bacteria": 0.000015056107622179097,
+          "detritus": 0.005657013472382105,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.799188847192795,
+          "biodiversity": 92.7850077826768,
+          "stability": 100
+        },
+        {
+          "seed": 84,
+          "o2": 7.818454015544925,
+          "co2": 5.6919942561205525,
+          "nh3": 0.00026497124976744557,
+          "no2": 0.0000011547762874701857,
+          "no3": 5.0963120060705425,
+          "algae": 0.034071141722891087,
+          "bacteria": 0,
+          "detritus": 0.0057181518820636525,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.7491270436289135,
+          "biodiversity": 93.13808919370673,
+          "stability": 100
+        },
+        {
+          "seed": 2606,
+          "o2": 7.808386837835242,
+          "co2": 5.722112290050329,
+          "nh3": 0.0002779485110748874,
+          "no2": 8.578813250462822e-7,
+          "no3": 5.093057040325706,
+          "algae": 0.03162758873276228,
+          "bacteria": 0,
+          "detritus": 0.005958485308497498,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.857040897564363,
+          "biodiversity": 92.9170503784769,
+          "stability": 100
+        }
+      ]
+    }
+  ],
+  "passed": 7,
+  "total": 16
+}

@@ -1,0 +1,152 @@
+{
+  "filename": "ecosphere/ecosphere_lab_3_14_systems_audit.html",
+  "checks": [
+    {
+      "name": "Diffusion conserves total solute in an open tank",
+      "status": "FAIL",
+      "evidence": "10 became 9.700000000000001"
+    },
+    {
+      "name": "Diffusion conserves solute beside a glass divider",
+      "status": "FAIL",
+      "evidence": "10 became 9.925"
+    },
+    {
+      "name": "Glass divider isolates chemical diffusion",
+      "status": "PASS",
+      "evidence": "Uniform concentrations remain separate"
+    },
+    {
+      "name": "Erasing a divider reconnects chemistry cache",
+      "status": "PASS",
+      "evidence": "2 compartments -> 1"
+    },
+    {
+      "name": "Submerged glass compartment has no direct atmospheric exchange",
+      "status": "PASS",
+      "evidence": {
+        "surface": 1.2582088,
+        "sealed": 1
+      }
+    },
+    {
+      "name": "Photosynthesis stops at zero dissolved carbon",
+      "status": "FAIL",
+      "evidence": "O2 production at zero CO2: 0.05404597083553509\n+ actual - expected\n\n+ 0.05404597083553509\n- 0\n"
+    },
+    {
+      "name": "Plants do not change chemistry across glass",
+      "status": "FAIL",
+      "evidence": "Right-side O2 changed by 0.0059741173941821775"
+    },
+    {
+      "name": "Added food patches remain inside glass compartment",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n0.25 !== 0\n"
+    },
+    {
+      "name": "A prey item cannot feed two fish in one step",
+      "status": "FAIL",
+      "evidence": "2 meals from 1 prey\n\n2 !== 1\n"
+    },
+    {
+      "name": "Separated fish cannot spawn together",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n3 !== 2\n"
+    },
+    {
+      "name": "Mature fish in one compartment can still spawn",
+      "status": "PASS",
+      "evidence": "Eligible local pair produces one newborn in open water"
+    },
+    {
+      "name": "Separated snails cannot borrow a mate or distant food",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n4 !== 2\n"
+    },
+    {
+      "name": "Shelter searches stay within glass compartment",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   score: 0.30600000000000005,\n+   source: 'vegetation',\n+   x: 9.5,\n+   y: 6\n+ }\n- null\n"
+    },
+    {
+      "name": "Hypoxic grazers retain oxygen-seeking behavior",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'foraging benthos'\n- 'seeking higher O₂'\n"
+    },
+    {
+      "name": "Clean inert substrate has no intrinsic oxygen demand",
+      "status": "PASS",
+      "evidence": "Sand, gravel and rock alone leave O2 unchanged"
+    },
+    {
+      "name": "A 12-hour engine request matches 48 quarter-hour steps",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n10 !== 20\n"
+    },
+    {
+      "name": "Algae cannot appear spontaneously in sterile water",
+      "status": "FAIL",
+      "evidence": "Algae recruited: 0.0014373129864350676\n+ actual - expected\n\n+ 0.0014373129864350676\n- 0\n"
+    },
+    {
+      "name": "Animal movement cannot tunnel through thin glass",
+      "status": "FAIL",
+      "evidence": "x=9.19\n\n1 !== 0\n"
+    },
+    {
+      "name": "Step honors short and zero durations",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n8.1 !== 8\n"
+    },
+    {
+      "name": "Carcasses settle and finish decomposing",
+      "status": "PASS",
+      "evidence": {
+        "detritus": 0.4806983522947522
+      }
+    },
+    {
+      "name": "Detritus loading consumes O2 and declines",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "o2": 8,
+          "detritus": 0.5
+        },
+        "after": {
+          "o2": 7.997386889928771,
+          "detritus": 0.49888001910387747
+        }
+      }
+    },
+    {
+      "name": "Refuge scores do not borrow vegetation across glass",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 0.25129513888888894\n- 0.03\n"
+    },
+    {
+      "name": "Probe nearby-organism descriptions respect glass",
+      "status": "FAIL",
+      "evidence": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "Carcass drift cannot cross a vertical glass wall",
+      "status": "PASS",
+      "evidence": {
+        "x": 8.901879639550891,
+        "y": 2.7261465678643435
+      }
+    },
+    {
+      "name": "Producer-rich tank recovers from low O2 as detritus declines",
+      "status": "PASS",
+      "evidence": {
+        "o2": 9.325775626525047,
+        "detritus": 0.018879465159200696
+      }
+    }
+  ],
+  "passed": 9,
+  "total": 25
+}

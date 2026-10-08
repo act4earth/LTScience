@@ -1,0 +1,241 @@
+{
+  "filename": "ecosphere/ecosphere_lab_3_14_1_systems_check.html",
+  "checks": [
+    {
+      "name": "Diffusion conserves total solute in an open tank",
+      "status": "PASS",
+      "evidence": {
+        "before": 10,
+        "after": 10
+      }
+    },
+    {
+      "name": "Diffusion conserves solute beside a glass divider",
+      "status": "PASS",
+      "evidence": {
+        "compartments": 2
+      }
+    },
+    {
+      "name": "Glass divider isolates chemical diffusion",
+      "status": "PASS",
+      "evidence": "Uniform concentrations remain separate"
+    },
+    {
+      "name": "Erasing a divider reconnects chemistry cache",
+      "status": "PASS",
+      "evidence": "2 compartments -> 1"
+    },
+    {
+      "name": "Submerged glass compartment has no direct atmospheric exchange",
+      "status": "PASS",
+      "evidence": {
+        "surface": 1.2586966,
+        "sealed": 1
+      }
+    },
+    {
+      "name": "Photosynthesis stops at zero dissolved carbon",
+      "status": "PASS",
+      "evidence": "No O2 is created from absent carbon"
+    },
+    {
+      "name": "Plants do not change chemistry across glass",
+      "status": "PASS",
+      "evidence": "Plant photosynthesis and respiration stay within compartment"
+    },
+    {
+      "name": "Added food patches remain inside glass compartment",
+      "status": "PASS",
+      "evidence": "Neighbor cells across divider unaffected"
+    },
+    {
+      "name": "A prey item cannot feed two fish in one step",
+      "status": "PASS",
+      "evidence": {
+        "meals": 1,
+        "consumed": 1
+      }
+    },
+    {
+      "name": "Separated fish cannot spawn together",
+      "status": "PASS",
+      "evidence": "No shared spawning across glass"
+    },
+    {
+      "name": "Mature fish in one compartment can still spawn",
+      "status": "PASS",
+      "evidence": "Eligible local pair produces one newborn in open water"
+    },
+    {
+      "name": "Separated snails cannot borrow a mate or distant food",
+      "status": "PASS",
+      "evidence": "No cross-compartment mate/resource borrowing"
+    },
+    {
+      "name": "Shelter searches stay within glass compartment",
+      "status": "PASS",
+      "evidence": "No inaccessible vegetation target across glass"
+    },
+    {
+      "name": "Hypoxic grazers retain oxygen-seeking behavior",
+      "status": "PASS",
+      "evidence": [
+        {
+          "kind": "daphnia",
+          "vy": -0.033
+        },
+        {
+          "kind": "snail",
+          "vy": -0.026
+        },
+        {
+          "kind": "scud",
+          "vy": -0.032
+        }
+      ]
+    },
+    {
+      "name": "Clean inert substrate has no intrinsic oxygen demand",
+      "status": "PASS",
+      "evidence": "Sand, gravel and rock alone leave O2 unchanged"
+    },
+    {
+      "name": "A 12-hour engine request matches 48 quarter-hour steps",
+      "status": "PASS",
+      "evidence": "Same duration and seeded outcomes"
+    },
+    {
+      "name": "Algae cannot appear spontaneously in sterile water",
+      "status": "PASS",
+      "evidence": "Zero algae remains zero"
+    },
+    {
+      "name": "Animal movement cannot tunnel through thin glass",
+      "status": "PASS",
+      "evidence": {
+        "x": 8.75
+      }
+    },
+    {
+      "name": "Step honors short and zero durations",
+      "status": "PASS",
+      "evidence": "0h and 0.05h honored"
+    },
+    {
+      "name": "Carcasses settle and finish decomposing",
+      "status": "PASS",
+      "evidence": {
+        "detritus": 0.4806983522947522
+      }
+    },
+    {
+      "name": "Detritus loading consumes O2 and declines",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "o2": 8,
+          "detritus": 0.5
+        },
+        "after": {
+          "o2": 7.99738671124238,
+          "detritus": 0.49888001910387747
+        }
+      }
+    },
+    {
+      "name": "Refuge scores do not borrow vegetation across glass",
+      "status": "PASS",
+      "evidence": "Vegetation across barrier provides no local refuge"
+    },
+    {
+      "name": "Probe nearby-organism descriptions respect glass",
+      "status": "PASS",
+      "evidence": "Probe context excludes the other compartment"
+    },
+    {
+      "name": "Carcass drift cannot cross a vertical glass wall",
+      "status": "PASS",
+      "evidence": {
+        "x": 8.677224760749807,
+        "y": 9.83
+      }
+    },
+    {
+      "name": "Producer-rich tank recovers from low O2 as detritus declines",
+      "status": "PASS",
+      "evidence": {
+        "o2": 9.148711010186267,
+        "detritus": 0.018879465159200696
+      }
+    },
+    {
+      "name": "Seeded starter runs stay finite and bounded for 30 days",
+      "status": "PASS",
+      "evidence": [
+        {
+          "seed": 42,
+          "o2": 7.7718886645203495,
+          "co2": 5.715448523635291,
+          "nh3": 0.00025482252537887,
+          "no2": 0.0000010539338442492415,
+          "no3": 5.098466684705306,
+          "algae": 0.028476762291385092,
+          "bacteria": 0.000009493897078949721,
+          "detritus": 0.005811714385220226,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.800018757474656,
+          "biodiversity": 92.61771927327949,
+          "stability": 100
+        },
+        {
+          "seed": 84,
+          "o2": 7.771504216394809,
+          "co2": 5.710368746112325,
+          "nh3": 0.00024372689743444077,
+          "no2": 0.0000010872289643278608,
+          "no3": 5.099314283064856,
+          "algae": 0.036351933983476616,
+          "bacteria": 0,
+          "detritus": 0.005369477702061681,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.745642627520697,
+          "biodiversity": 93.33634054919152,
+          "stability": 100
+        },
+        {
+          "seed": 2606,
+          "o2": 7.789930660052633,
+          "co2": 5.707826212664183,
+          "nh3": 0.0002972919392116638,
+          "no2": 9.678849173140573e-7,
+          "no3": 5.0956769278054495,
+          "algae": 0.027963079423502943,
+          "bacteria": 0,
+          "detritus": 0.0059213598956399565,
+          "fish": 4,
+          "daphnia": 6,
+          "snail": 5,
+          "scud": 3,
+          "carcasses": 0,
+          "plants": 5,
+          "plantBiomass": 2.854464001656282,
+          "biodiversity": 92.56728477369882,
+          "stability": 100
+        }
+      ]
+    }
+  ],
+  "passed": 26,
+  "total": 26
+}
